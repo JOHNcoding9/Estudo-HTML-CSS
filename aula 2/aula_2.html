@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!--Importando o estilo CSS-->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!--Os formulários são utilizados para enviar dados do usuário para o servidor-->
+    <!--A propriedade action especifica para onde os dados do formulário devem ser enviados quando o formulário é submetido.-->
+    <!--Se o valor de action for deixado como uma string vazia (action="") ou action="#", o formulário será enviado para a mesma URL em que a página foi carregada.
+
+    GET: Os dados são enviados como parte da URL (como parâmetros de consulta). Este método é usado principalmente quando os dados são pequenos e não sensíveis (por exemplo, em uma busca).
+
+    POST: Os dados são enviados no corpo da requisição HTTP, não sendo visíveis na URL. Este método é usado quando os dados são maiores ou mais sensíveis (como senhas ou informações de pagamento).
+    
+    PUT:
+    Uso: Usado para atualizar ou substituir um recurso existente no servidor.
+
+    Comportamento: Os dados são enviados no corpo da requisição, como no POST, mas o método é usado para indicar que os dados devem substituir o recurso atual (geralmente usado em APIs RESTful).
+
+    Exemplo: Atualizar informações de um perfil de usuário.
+    TAMBÈ TEM OUTROS-->
+
+    <form action="#" method="get">
+        <div>
+         <label>Seu Nome:</label>
+         <input type="text" placeholder="Digite aqui" required>
+        </div>
+
+        <div class="controle_form">
+            <input type="reset" value="limpar">
+            <input type="submit" value="enviar">
+        </div>
+    </form>
+
+    <hr>
+
+    <!--Email-->
+    <form action="#" method="get">
+        <div>
+            <label for="email">Informe seu email: </label>
+            <input type="email" name="email">
+
+
+        </div>
+    </form>
+
+    <hr>
+
+    <!--Números-->
+    <form action="#" method="get">
+        <div>
+            <label for="idade">Informe sua idade: </label>
+            <input type="number" name="idade">
+
+
+        </div>
+    </form>
+
+    <hr>
+
+    <!--Data-->
+    <form action="#" method="get">
+        <div>
+            <label for="data">Informe a data de hoje: </label>
+            <input type="date" name="data">
+
+
+        </div>
+    </form>
+
+    <hr>
+
+     <!--Senha-->
+    <form action="#" method="get">
+        <div >
+            <label for="senha">Informe sua senha: </label>
+            <input type="password" name="senha">
+
+
+        </div>
+    </form>
+
+    <hr>
+
+    <!--Radio-->
+    <form action="#" method="get">
+        <div >
+
+            <label for="preferido">Selecione sua comida favorita: </label>
+
+           <div class="radio">
+             <input type="radio" value="Macarrão" name="preferido">
+             <label for="Macarrão">Macarrão</label>
+           </div>
+
+           <div class="radio">
+            <input type="radio" value="Feijoada" name="preferido">
+            <label for="Feijoada">Feijoada</label>
+          </div>
+
+          <div class="radio">
+            <input type="radio" value="Churrasco" name="preferido">
+            <label for="Churrasco">Churrasco</label>
+          </div>
+
+          <div class="radio">
+            <input type="radio" value="Pizza" name="preferido">
+            <label for="Pizza">Pizza</label>
+          </div>
+        </div>
+    </form>
+
+   <hr>
+
+    <!--Checkbox-->
+    <form action="#" method="get">
+        
+        <label for="disciplinas">Escolha as disciplinas do semestre: </label>
+        <div class="check">
+            <input type="checkbox" value="frontend" name="disciplinas[]">
+            <label for="frontend">Front-end</label>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" value="backend" name="disciplinas[]">
+            <label for="backend">Back-end</label>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" value="banco_dados_2" name="disciplinas[]">
+            <label for="banco_dados_2">Banco de dados 2</label>
+        </div>
+            
+
+    </form>
+
+    <hr>
+
+    <!--Selecionar arquivo-->
+    <form action="#" method="get">
+        <div>
+            <label for="arquivo">Selecione um arquivo: </label>
+            <input type="file" name="arquivo">
+
+
+        </div>
+    </form>
+
+     <!--Selecionar arquivoS-->
+    <form action="#" method="get">
+        <div>
+            <label for="arquivos">Selecione um  ou mais arquivos: </label>
+            <input type="file" name="arquivo[]" multiple>
+        </div>
+    </form>
+
+    <hr>
+
+    <!--Seleção simples-->
+    <form action="#" method="get">
+        <div>
+            <label for="produto">Selecione um produto: </label>
+            <select name="produto">
+                <option value="produto_1">produto 1</option>
+                <option value="produto_2">produto 2</option>
+                <option value="produto_3">produto 3</option>
+                <option value="produto_4">produto 4</option>
+            </select>
+        </div>
+    </form>
+
+    <!--Seleção multipla-->
+    <form action="#" method="get">
+        <div>
+            <label for="produto">Selecione produtoS: </label>
+            <select name="produto" multiple>
+                <option value="produto_1">produto 1</option>
+                <option value="produto_2">produto 2</option>
+                <option value="produto_3">produto 3</option>
+                <option value="produto_4">produto 4</option>
+            </select>
+        </div>
+    </form>
+
+   
+ <!--Elemento para área de texto-->
+    <form action="#" method="get">
+        <div>
+            <label for="comentario">Deixe seu comentario: </label>
+            <textarea name="comentario"></textarea>
+        </div>
+    </form>
+
+<!--Elemento para fieldset e legend
+
+A tag fieldset é utilizada para agrupar inputs;
+• A tag legend é semelhante a tag label e descreve os inputs agrupados;
+• Utilizamos elas para conectar dois ou mais inputs que se referem a mesma informação,
+por exemplo, nome e sobrenome. -->
+
+<form action="#" method="get">
+    <div>
+        <fieldset>
+            <legend>informe seu nome completo</legend>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome">
+            <label for="sobrenome">Sobreome: </label>
+            <input type="text" name="sobrenome">
+        </fieldset>
+    </div>
+</form>
+
+
+  <!--Elemento Datalist-->
+
+    <form action="#" method="get">
+        <div>
+            <label for="cidade">Selecione uma cidade: </label>
+            <input type="text" name="cidade" list="cidades">
+
+            <datalist id="cidades">
+                <option value="Criciúma"></option>
+                <option value="Içara"></option>
+                <option value="Cidade de Deus"></option>
+                <option value="Sombrio"></option>
+                <option value="Turvo"></option>
+            </datalist>
+        </div>
+    </form>
+    
+</body>
+</html>

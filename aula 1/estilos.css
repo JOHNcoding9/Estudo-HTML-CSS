@@ -1,0 +1,51 @@
+p{
+    color: green;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-style: oblique;
+    font-weight: 900;
+
+}
+
+/* backgorund do cellbit */
+.background_image {
+    background-image: url('assets/cell.jpg');
+    height: 300px;
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+.display-inline {
+    display: inline-block;
+}
+
+.fixed {
+    background-color: yellow;
+    position: fixed;
+    top: 20px;
+    left: 300px
+}
+
+.box_1 {
+    background-color: red;
+    position: relative;
+    z-index: 1;
+}
+
+.box_2 {
+    background-color: green;
+    position: relative;
+    top: -40;
+    z-index: 3;
+}
+
+.box_3 {
+    background-color: blue;
+    position: relative;
+    top: -80;
+    z-index: 2;
+}
+

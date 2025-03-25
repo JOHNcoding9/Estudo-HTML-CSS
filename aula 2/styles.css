@@ -1,0 +1,19 @@
+div {
+    margin-bottom: 10px;
+}
+
+input, label {
+    display:block;
+}
+
+.controle_form input {
+    display: inline-block;
+}
+
+.radio label .radio input {
+    display: inline-block;
+}
+
+.check label , .check input {
+    display: inline-block;
+}
